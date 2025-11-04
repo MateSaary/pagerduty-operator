@@ -68,7 +68,8 @@ func GeneratePdSecret(namespace string, name string, pdIntegrationKey string) *c
 			Namespace: namespace,
 		},
 		Data: map[string][]byte{
-			config.PagerDutySecretKey: []byte(pdIntegrationKey),
+			config.PagerDutySecretKey:    []byte(pdIntegrationKey),
+			config.CADPagerDutySecretKey: []byte(pdIntegrationKey),
 		},
 	}
 
